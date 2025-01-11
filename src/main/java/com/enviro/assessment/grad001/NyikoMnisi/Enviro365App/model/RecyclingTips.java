@@ -25,6 +25,11 @@ public class RecyclingTips {
     @NotBlank(message = "Tip content is required")
     private String content;
 
+    
+    @ManyToOne
+    @JoinColumn(name = "waste_category_id", nullable = false)
+    private WasteCategory wasteCategory;
+
     public Long getId() {
         return id;
     }
@@ -47,5 +52,13 @@ public class RecyclingTips {
 
     public void setContent(String content) {
         this.content = content;
+    }
+    
+      public WasteCategory getWasteCategory() {
+        return wasteCategory;
+    }
+
+    public void setWasteCategory(WasteCategory wasteCategory) {
+        this.wasteCategory = wasteCategory;
     }
 }

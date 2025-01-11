@@ -11,6 +11,9 @@ package com.enviro.assessment.grad001.NyikoMnisi.Enviro365App.model;
  */
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import java.util.List;
+import java.util.ArrayList;
+
 
 @Entity
 public class WasteCategory {
@@ -23,6 +26,13 @@ public class WasteCategory {
 
     @NotBlank(message = "Description is required")
     private String description;
+    
+    @OneToMany(mappedBy = "wasteCategory", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<DisposalGuidelines> guidelines = new ArrayList<>();
+    
+     @OneToMany(mappedBy = "wasteCategory", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<RecyclingTips> tips = new ArrayList<>();
+    
     
     public long getId() {
        return id;
@@ -47,5 +57,6 @@ public class WasteCategory {
     public void setDescription(String description){
         this.description = description;
     }
+    
 
 }

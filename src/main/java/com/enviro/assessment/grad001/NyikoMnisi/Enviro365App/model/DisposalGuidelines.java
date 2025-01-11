@@ -25,6 +25,10 @@ public class DisposalGuidelines {
     @NotBlank(message = "Guidelines are required")
     private String guidelines;
     
+     @ManyToOne
+    @JoinColumn(name = "waste_category_id", nullable = false)
+    private WasteCategory wasteCategory;
+    
      public Long getId() {
         return id;
     }
@@ -48,4 +52,12 @@ public class DisposalGuidelines {
     public void setGuidelines(String guidelines) {
         this.guidelines = guidelines;
     } 
+    
+     public WasteCategory getWasteCategory() {
+        return wasteCategory;
+    }
+
+    public void setWasteCategory(WasteCategory wasteCategory) {
+        this.wasteCategory = wasteCategory;
+    }
 }
