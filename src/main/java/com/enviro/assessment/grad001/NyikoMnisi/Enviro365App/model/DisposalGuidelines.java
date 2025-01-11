@@ -25,7 +25,10 @@ public class DisposalGuidelines {
     @NotBlank(message = "Guidelines are required")
     private String guidelines;
     
-     @ManyToOne
+    
+    /* Many to one relationship from DisposalGuideline to Wastecategory*/
+    
+    @ManyToOne
     @JoinColumn(name = "waste_category_id", nullable = false)
     private WasteCategory wasteCategory;
     
