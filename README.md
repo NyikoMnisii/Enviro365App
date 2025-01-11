@@ -56,43 +56,45 @@ Run the Application
 
     mvn spring-boot:run
 
-   ##Access the application:
+   ## Access the application:
         - **Base URL: http://localhost:8080**
         - **Swagger Documentation: http://localhost:8080/swagger-ui.html**
         - **H2 Console: http://localhost:8080/h2-console**
 ---
 
-##API Endpoints
+## API Endpoints
 - **Waste Categories**
 - **Method	Endpoint	Description**
-GET	/api/categories	Retrieve all waste categories
-GET	/api/categories/{id}	Retrieve a specific waste category
-POST	/api/categories	Create a new waste category
-PUT	/api/categories/{id}	Update an existing waste category
-DELETE	/api/categories/{id}	Delete a waste category
+  
+- **GET	/api/categories	Retrieve all waste categories*
+- **GET	/api/categories/{id}	Retrieve a specific waste category*
+- **POST /api/categories	Create a new waste category*
+- **PUT	/api/categories/{id}	Update an existing waste category*
+- **DELETE	/api/categories/{id}	Delete a waste category*
 - **Disposal Guidelines**
 - **Method	Endpoint	Description**
-GET	/api/guidelines	Retrieve all disposal guidelines
-GET	/api/guidelines/{id}	Retrieve a specific guideline
-POST	/api/guidelines	Create new disposal guidelines
-DELETE	/api/guidelines/{id}	Delete disposal guidelines
+- **GET	/api/guidelines	Retrieve all disposal guidelines*
+- **GET	/api/guidelines/{id}	Retrieve a specific guideline*
+- **POST	/api/guidelines	Create new disposal guidelines*
+- **DELETE	/api/guidelines/{id}	Delete disposal guidelines*
 - **Recycling Tips**
 - **Method	Endpoint	Description**
-GET	/api/tips	Retrieve all recycling tips
-GET	/api/tips/{id}	Retrieve a specific recycling tip
-POST	/api/tips	Create a new recycling tip
-DELETE	/api/tips/{id}	Delete a recycling tip
-##Error Handling
+- **GET	/api/tips	Retrieve all recycling tips*
+- **GET	/api/tips/{id}	Retrieve a specific recycling tip*
+- **POST	/api/tips	Create a new recycling tip*
+- **DELETE	/api/tips/{id}	Delete a recycling tip*
+
+## Error Handling
 
 - **The application uses centralized error handling with meaningful error messages.**
-- **Example of a validation error response:**
+- **Example of a validation error response:*
 
 {
   "title": "Title is required",
   "content": "Tip content is required"
 }
 
-##Example Request Bodies
+## Example Request Bodies
 - **Waste Categories**
 
 POST /api/categories
@@ -125,5 +127,5 @@ POST /api/tips
   }
 }
 
-##Testing
+## Testing
 Manual Testing: Use Postman or Swagger UI to test API endpoints.
