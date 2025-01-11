@@ -32,7 +32,8 @@ src/main/java/com/enviro/assessment/grad001/NyikoMnisi/Enviro365App
     ├── repository/       # Data Access Layer (Repositories)
     ├── model/            # JPA Entity Models
     ├── exception/        # Global Exception Handling
-
+```
+---
 ##Setup Instructions
 Prerequisites
 
@@ -59,6 +60,7 @@ Run the Application
         - **Base URL: http://localhost:8080**
         - **Swagger Documentation: http://localhost:8080/swagger-ui.html**
         - **H2 Console: http://localhost:8080/h2-console**
+---
 
 ##API Endpoints
 - **Waste Categories**
