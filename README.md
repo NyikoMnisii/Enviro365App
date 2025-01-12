@@ -41,7 +41,7 @@ Prerequisites
     Maven: Version 3.8+
     API Testing Tool:Swagger UI, or cURL
 
-##Running the Application
+## Running the Application
 
 - **Clone the Repository**
 
@@ -54,7 +54,7 @@ mvn clean install
 
 Run the Application
 
-    mvn spring-boot:run
+mvn spring-boot:run
 
    ## Access the application:
         - **Base URL: http://localhost:8080**
